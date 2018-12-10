@@ -2,11 +2,7 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Signika:300,700");
 
-/*
-	Broadcast by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
+
 
 /* Reset */
 
@@ -3275,6 +3271,24 @@
 			}
 
 		}
+
+
+	.shorttext {
+		background: rgba(255, 255, 255, 0.01);
+		border-radius: 4px;
+		margin: 0 0 2em 0;
+		position: relative;
+		/* essential */
+		text-overflow: ellipsis;
+		width: 100%;
+		height: 160px;
+		white-space: wrap;
+		overflow: hidden;
+		
+		/* for good looks */
+		padding: 10px;
+		
+	}
 
 /* Video */
 

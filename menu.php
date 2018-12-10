@@ -13,6 +13,6 @@
     <ul class="links">
         <li><a href="index.php">Pradžia</a></li>
         <li><a href="video.php">Video</a></li>
-        <li><a href="elements.php">Elementai</a></li>
+        <li><a href="post.php">Naujienos</a></li>
     </ul>
 </nav>

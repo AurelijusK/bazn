@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Video</title>
+		<title>Naujienos</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,18 +18,18 @@
 
 		<!-- One -->
 
-		<!-- Last Video -->
+		<!-- Last Post -->
 
 
 		<?php
 
-		if (!empty($_GET['videoid'])){
-		$sql = "SELECT * FROM video
-		WHERE videoid=".$_GET['videoid']." LIMIT 1";
+		if (!empty($_GET['postid'])){
+		$sql = "SELECT * FROM post
+		WHERE postid=".$_GET['postid']." LIMIT 1";
 		}
 		else{
-		$sql = "SELECT * FROM video
-		ORDER BY videotime DESC
+		$sql = "SELECT * FROM post
+		ORDER BY posttime DESC
 		LIMIT 1";
 		}
 
@@ -40,20 +40,13 @@
 		?>
 						<section class="wrapper style1">
 							<div class="inner">
-								<header class="align-center">
-									<h2>Nam eu nisi non ante sodale</h2>
-									<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-								</header>
-								<div class="video">
-									<div class="video-wrapper">
-									<?php echo $row['videolink']; ?>
-									</div>
-									<p class="caption">
-									<?php echo $row['videotitle'] . "<br>" . $row['videodate']; ?>
-									</p>
-								</div>
-								<p>Curabitur venenatis lorem ut finibus finibus. Ut quis eleifend libero, nec ultricies metus. Morbi magna risus, congue sit amet pellentesque eget, malesuada ut justo. Sed ac pretium quam. Ut vel ex vitae enim sagittis posuere ac id erat. Vestibulum vel ullamcorper tellus. Donec sapien massa, venenatis ac felis vel, vestibulum sagittis enim. Maecenas ut egestas lorem, nec luctus ligula. Vestibulum neque diam, aliquet non enim a, cursus lacinia metus. Aenean fringilla luctus rhoncus. Integer vulputate massa ac suscipit venenatis. Integer luctus elit non nulla fringilla, ullamcorper maximus sem congue. Integer tristique eu nisi nec fermentum. Ut malesuada quis massa at ultricies.</p>
-								<p>Donec molestie tellus eu tincidunt dignissim. Sed sollicitudin bibendum ultricies. Vivamus tristique justo lacinia dui tempus consequat. Sed hendrerit justo in nisl auctor, id rutrum tortor congue. Vivamus mattis nibh et sem rutrum, vel viverra purus viverra. Donec et justo at orci euismod hendrerit vel vel neque. Donec gravida ipsum in augue volutpat laoreet. Ut lobortis turpis sit amet sodales ultrices.</p>
+							<header class="align-center">
+								<h2><?php echo $row['posttitle']; ?></h2>
+								<p><?php echo $row['postautor'].'  '.$row['postdate']; ?></p>
+							</header>
+				
+								<p><?php echo $row['postcontent']; ?></p>
+						
 							</div>
 						</section>
 		<?php
@@ -130,29 +123,32 @@
 							<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
 						</header>
 			<div class="flex flex-2">
-			<!-- All Video -->
+			<!-- All Posts -->
 
 
 			<?php
 
 
-			$sql = "SELECT * FROM video
-			ORDER BY videotime DESC";
+			$sql = "SELECT * FROM post
+			ORDER BY posttime DESC";
 
 			if($result = mysqli_query($conn, $sql)){
 				if(mysqli_num_rows($result) > 0){
 
 						while($row = mysqli_fetch_array($result)){	
 			?>				
-							<div class="video col">
-								<div class="video-wrapper">
-								<?php echo $row['videolink']; ?>
-								</div>
-								<p class="caption">
-								<?php echo $row['videotitle'] . "<br>" . $row['videodate']; ?>
-								</p>
-								<?php echo "<a href='video.php?videoid=".$row['videoid']."' class='link'><span>Click Me</span></a>"; ?>
+						<div class="col">	
+						<header class="align-center">
+							<h3><?php echo $row['posttitle']; ?></h3>
+							<p><?php echo $row['postautor'].'  '.$row['postdate']; ?></p>
+						</header>
+							<div  class="shorttext">
+							<p><?php echo $row['postcontent']; ?></p>
 							</div>
+						<header class="align-center">
+						<?php echo "<a href='post.php?postid=".$row['postid']."' class='button alt scrolly'><span>Skaityti</span></a>"; ?>
+						</header>
+						</div>
 			<?php
 						}
 					// Free result set
