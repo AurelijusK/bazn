@@ -139,45 +139,47 @@
 							<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
 						</header>
 
-						<!-- 3 Column Video Section -->
-							<div class="flex flex-3">
-								<div class="video col">
-									<div class="image fit">
-										<img src="images/pic09.jpg" alt="" />
-										<div class="arrow">
-											<div class="icon fa-play"></div>
+						<!-- Gallery -->
+						<section id="galleries">
+
+							<!-- Photo Galleries -->
+								<div class="gallery">
+						
+									<div class="content">
+										<div class="media">
+											<a href="images/fulls2/01.jpg"><img src="images/fulls2/01.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/05.jpg"><img src="images/fulls2/05.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/08.jpg"><img src="images/fulls2/08.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/02.jpg"><img src="images/fulls2/02.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/06.jpg"><img src="images/fulls2/06.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/04.jpg"><img src="images/fulls2/04.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/03.jpg"><img src="images/fulls2/03.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls2/07.jpg"><img src="images/fulls2/07.jpg" alt="" title="This right here is a caption." /></a>
 										</div>
 									</div>
-									<p class="caption">
-										Cras eget lacus sed mauris scelerisque tincidunt
-									</p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
+																								
 								</div>
-								<div class="video col">
-									<div class="image fit">
-										<img src="images/pic10.jpg" alt="" />
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-										Vivamus vulputate lacus non massa auctor lobortis
-									</p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
-								</div>
-								<div class="video col">
-									<div class="image fit">
-										<img src="images/pic11.jpg" alt="" />
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-										Nam eu nisi non ante sodales interdum a vitae neque
-									</p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
-								</div>
-							</div>
+								<header class="align-center">
+								<?php echo "<a href='gallery.php' class='button big alt scrolly'><span>Galerija</span></a>"; ?>
+								</header>
+
+						</section>
+
+
 					</div>
 				</section>
 
@@ -188,6 +190,7 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
