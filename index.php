@@ -144,37 +144,49 @@
 
 							<!-- Photo Galleries -->
 								<div class="gallery">
-						
+					
 									<div class="content">
-										<div class="media">
-											<a href="images/fulls2/01.jpg"><img src="images/fulls2/01.jpg" alt="" title="This right here is a caption." /></a>
+									<?php
+
+
+									// $sql = "SELECT * FROM images
+									// ORDER BY imgtime DESC";
+									$sql = "SELECT images.imgid, images.imggallery, images.imglink, images.imgtitle, gallery.galleryid, gallery.gallerytitle, gallery.gallerydate
+									FROM images
+									JOIN gallery ON images.imggallery = gallery.galleryid
+									ORDER BY images.imgtime DESC";
+
+									if($result = mysqli_query($conn, $sql)){
+										if(mysqli_num_rows($result) > 0){
+
+												while($row = mysqli_fetch_array($result)){	
+									?>				
+									
+										<div class="media" style="background-image: url(<?php echo ($row['imglink']); ?>);">
+
+											<a href="<?php echo ($row['imglink']); ?>"><img src="<?php echo ($row['imglink']); ?>" alt="" title="<?php echo ($row['imgtitle']); ?>. Galerija: <?php echo ($row['gallerytitle']); ?> <?php echo($row['gallerydate']); ?>" /></a>
 										</div>
-										<div class="media">
-											<a href="images/fulls2/05.jpg"><img src="images/fulls2/05.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
-										<div class="media">
-											<a href="images/fulls2/08.jpg"><img src="images/fulls2/08.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
-										<div class="media">
-											<a href="images/fulls2/02.jpg"><img src="images/fulls2/02.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
-										<div class="media">
-											<a href="images/fulls2/06.jpg"><img src="images/fulls2/06.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
-										<div class="media">
-											<a href="images/fulls2/04.jpg"><img src="images/fulls2/04.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
-										<div class="media">
-											<a href="images/fulls2/03.jpg"><img src="images/fulls2/03.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
-										<div class="media">
-											<a href="images/fulls2/07.jpg"><img src="images/fulls2/07.jpg" alt="" title="This right here is a caption." /></a>
-										</div>
+	
+									<?php
+											}
+											// Free result set
+											mysqli_free_result($result);
+										} else{
+											echo "No records matching your query were found.";
+										}
+									} else{
+										echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+									}
+
+
+									?>
 									</div>
-																								
+								
+
+																							
 								</div>
 								<header class="align-center">
-								<?php echo "<a href='gallery.php' class='button big alt scrolly'><span>Galerija</span></a>"; ?>
+								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Galerijos</span></a>"; ?>
 								</header>
 
 						</section>

@@ -45,7 +45,6 @@
 		-webkit-text-size-adjust: none;
 	}
 
-
 /* Gallery */
 
 @-moz-keyframes gallery {
@@ -173,9 +172,21 @@
 			opacity: 0;
 			position: relative;
 			width: 25%;
+			height: 250px;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center;
 			
 			
 		}
+		.gallery .content .media:hover{
+			-moz-transform: scale(1.075);
+			-webkit-transform: scale(1.075);
+			-ms-transform: scale(1.075);
+			transform: scale(1.075);
+			z-index: 100;
+		}
+		
 
 			.gallery .content .media a {
 				display: block;
@@ -189,6 +200,7 @@
 				max-width: 100%;
 				height: auto;
 				vertical-align: middle;
+				visibility: hidden;
 				
 				
 			}

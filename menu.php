@@ -14,5 +14,6 @@
         <li><a href="index.php">Pradžia</a></li>
         <li><a href="video.php">Video</a></li>
         <li><a href="post.php">Naujienos</a></li>
+        <li><a href="galleries.php">Galerijos</a></li>
     </ul>
 </nav>

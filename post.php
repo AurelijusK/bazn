@@ -79,7 +79,7 @@
 
 						$sql = "SELECT * FROM video
 						ORDER BY videotime DESC
-						-- LIMIT 3 OFFSET 1";
+						LIMIT 3";
 
 						if($result = mysqli_query($conn, $sql)){
 							if(mysqli_num_rows($result) > 0){

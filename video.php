@@ -41,7 +41,7 @@
 						<section class="wrapper style1">
 							<div class="inner">
 								<header class="align-center">
-									<h2>Nam eu nisi non ante sodale</h2>
+									<h2>Video įrašai</h2>
 									<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
 								</header>
 								<div class="video">
@@ -52,9 +52,12 @@
 									<?php echo $row['videotitle'] . "<br>" . $row['videodate']; ?>
 									</p>
 								</div>
-								<p>Curabitur venenatis lorem ut finibus finibus. Ut quis eleifend libero, nec ultricies metus. Morbi magna risus, congue sit amet pellentesque eget, malesuada ut justo. Sed ac pretium quam. Ut vel ex vitae enim sagittis posuere ac id erat. Vestibulum vel ullamcorper tellus. Donec sapien massa, venenatis ac felis vel, vestibulum sagittis enim. Maecenas ut egestas lorem, nec luctus ligula. Vestibulum neque diam, aliquet non enim a, cursus lacinia metus. Aenean fringilla luctus rhoncus. Integer vulputate massa ac suscipit venenatis. Integer luctus elit non nulla fringilla, ullamcorper maximus sem congue. Integer tristique eu nisi nec fermentum. Ut malesuada quis massa at ultricies.</p>
-								<p>Donec molestie tellus eu tincidunt dignissim. Sed sollicitudin bibendum ultricies. Vivamus tristique justo lacinia dui tempus consequat. Sed hendrerit justo in nisl auctor, id rutrum tortor congue. Vivamus mattis nibh et sem rutrum, vel viverra purus viverra. Donec et justo at orci euismod hendrerit vel vel neque. Donec gravida ipsum in augue volutpat laoreet. Ut lobortis turpis sit amet sodales ultrices.</p>
-							</div>
+								
+								<header class="align-center">
+								<p>Įkelti naują video įrašą</p>
+								<?php echo "<a href='videonew.php' class='button big alt scrolly'><span>Įkelti</span></a>"; ?>
+								</header>
+								</div>
 						</section>
 		<?php
 				// Free result set
@@ -86,7 +89,7 @@
 
 						$sql = "SELECT * FROM video
 						ORDER BY videotime DESC
-						-- LIMIT 3 OFFSET 1";
+						LIMIT 6";
 
 						if($result = mysqli_query($conn, $sql)){
 							if(mysqli_num_rows($result) > 0){
