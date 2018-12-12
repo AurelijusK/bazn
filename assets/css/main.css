@@ -216,7 +216,14 @@
 
 				.gallery .content .media {
 					width: 50%;
+					/* height: 200px; */
+					/* background: none; */
 				}
+				/* .gallery .content .media img {
+
+					visibility:visible;
+
+				} */
 
 			}
 
@@ -224,7 +231,14 @@
 
 				.gallery .content .media {
 					width: 100%;
+					/* height: auto;
+					background: none; */
 				}
+				/* .gallery .content .media img {
+
+					visibility:visible;
+	
+				} */
 
 			}
 

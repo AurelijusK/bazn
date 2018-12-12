@@ -154,7 +154,8 @@
 									$sql = "SELECT images.imgid, images.imggallery, images.imglink, images.imgtitle, gallery.galleryid, gallery.gallerytitle, gallery.gallerydate
 									FROM images
 									JOIN gallery ON images.imggallery = gallery.galleryid
-									ORDER BY images.imgtime DESC";
+									ORDER BY images.imgtime DESC
+									LIMIT 8";
 
 									if($result = mysqli_query($conn, $sql)){
 										if(mysqli_num_rows($result) > 0){

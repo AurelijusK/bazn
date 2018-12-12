@@ -18,7 +18,7 @@ $sql = "SELECT * FROM gallery
  if($result = mysqli_query($conn, $sql)){
     if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result) ;      
-            header("Location:gallery.php?galleryid=".$row['galleryid']."");
+            header("Location:galleryedit.php?galleryid=".$row['galleryid']."");
     }
  }
  
