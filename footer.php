@@ -45,3 +45,10 @@
 					Copyright &copy; 2018 by <a href="https://www.facebook.com/aurelijanas" target="_blank">AK</a>.
 				</div>
 			</footer>
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>

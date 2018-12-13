@@ -56,7 +56,6 @@
 								$sql2 = "SELECT *
 								FROM images
 								WHERE images.imggallery='" . $row['galleryid'] . "'
-								
 								ORDER BY images.imgtime DESC
 								LIMIT 4";
 								if($result2 = mysqli_query($conn, $sql2)){
@@ -64,8 +63,8 @@
 			
 										while($row2 = mysqli_fetch_array($result2)){	
 								?>							
-										<div class="media" style="background-image: url(<?php echo ($row2['imglink']); ?>);">									
-											<a href="<?php echo ($row2['imglink']); ?>"><img src="<?php echo ($row2['imglink']); ?>" alt="" title="<?php echo ($row2['imgtitle']); ?>" /></a>
+										<div class="media" style="background-image: url(<?php echo ($row2['imglink2']); ?>);">									
+											<a href="<?php echo ($row2['imglink']); ?>"><img src="<?php echo ($row2['imglink2']); ?>" alt="" title="<?php echo ($row2['imgtitle']); ?>" /></a>
 										</div>
 								<?php
 											}
@@ -114,13 +113,6 @@
 		<!-- Footer -->
 		<?php include 'footer.php';?>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

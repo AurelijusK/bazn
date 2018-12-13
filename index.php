@@ -151,7 +151,7 @@
 
 									// $sql = "SELECT * FROM images
 									// ORDER BY imgtime DESC";
-									$sql = "SELECT images.imgid, images.imggallery, images.imglink, images.imgtitle, gallery.galleryid, gallery.gallerytitle, gallery.gallerydate
+									$sql = "SELECT images.imgid, images.imggallery, images.imglink, images.imglink2, images.imgtitle, gallery.galleryid, gallery.gallerytitle, gallery.gallerydate
 									FROM images
 									JOIN gallery ON images.imggallery = gallery.galleryid
 									ORDER BY images.imgtime DESC
@@ -163,9 +163,9 @@
 												while($row = mysqli_fetch_array($result)){	
 									?>				
 									
-										<div class="media" style="background-image: url(<?php echo ($row['imglink']); ?>);">
+										<div class="media" style="background-image: url(<?php echo ($row['imglink2']); ?>);">
 
-											<a href="<?php echo ($row['imglink']); ?>"><img src="<?php echo ($row['imglink']); ?>" alt="" title="<?php echo ($row['imgtitle']); ?>. Galerija: <?php echo ($row['gallerytitle']); ?> <?php echo($row['gallerydate']); ?>" /></a>
+											<a href="<?php echo ($row['imglink']); ?>"><img src="<?php echo ($row['imglink2']); ?>" alt="" title="<?php echo ($row['imgtitle']); ?>. Galerija: <?php echo ($row['gallerytitle']); ?> <?php echo($row['gallerydate']); ?>" /></a>
 										</div>
 	
 									<?php
@@ -201,13 +201,6 @@
 		<!-- Footer -->
 		<?php include 'footer.php';?>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

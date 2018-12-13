@@ -62,10 +62,10 @@
 												while($row = mysqli_fetch_array($result)){	
 									?>				
 									
-										<div class="media" style="background-image: url(<?php echo ($row['imglink']); ?>);">
+										<div class="media" style="background-image: url(<?php echo ($row['imglink2']); ?>);">
 										
 								
-											<a href="<?php echo ($row['imglink']); ?>"><img src="<?php echo ($row['imglink']); ?>" alt="" title="<?php echo ($row['imgtitle']); ?>" /></a>
+											<a href="<?php echo ($row['imglink']); ?>"><img src="<?php echo ($row['imglink2']); ?>" alt="" title="<?php echo ($row['imgtitle']); ?>" /></a>
 										</div>
 
 									<?php
@@ -97,13 +97,6 @@
 		<!-- Footer -->
 		<?php include 'footer.php';?>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+	
 	</body>
 </html>
