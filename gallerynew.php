@@ -23,11 +23,9 @@
                 <form action="gallerynewfin.php" method="post" enctype="multipart/form-data">
                    
                     <p>Galerijos pavadinimas: </p>
-                    <input class="inputfieldh" type="text"  required name="gallerytitle" value="" ><br>
-                    
+                    <input class="input" type="text"  required name="gallerytitle" value="" ><br>
                     <p><?php echo date("Y-m-d");?></p><br>
-                    
-                    <button type="submit" class="button big alt scrolly">Taip</button>       
+                    <button type="submit" class="button alt scrolly">Taip</button>       
                    
                 </form>
             </div>

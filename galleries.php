@@ -22,12 +22,12 @@
 
 			<section class="wrapper style1">
 				<div class="inner">
-					<header class="align-center">
+					<!-- <header class="align-center">
 						<h2>Galerijos</h2>
 						<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-					</header>
-				</div>
-			</section>
+					</header> -->
+			
+
 
 					<!-- Gallery -->
 					<section id="galleries">
@@ -43,8 +43,8 @@
 
 <!-------------------------------------------------------------------------------------------------------------------------->
 							<!-- Photo Galleries -->
-					<section class="wrapper style1">
-						<div class="inner">		
+
+						
 							<div class="gallery">	
 							<header class="align-center">
 							<h3><?php echo ($row['gallerytitle']); ?></h3>
@@ -52,6 +52,7 @@
 							<?php echo "<a href='galleryedit.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Redaguoti</span></a>"; ?></p>
 							</header>									
 								<div class="content">	
+								
 								<?php			
 								$sql2 = "SELECT *
 								FROM images
@@ -80,8 +81,8 @@
 								</div>	
 																		
 							</div>	
-						</div>
-					</section>
+						
+				
 <!-------------------------------------------------------------------------------------------------------------------------->
 
 				
@@ -99,14 +100,14 @@
 
 					</section>
 
-
-
+				</div>
+			</section>
 
 			<section class="wrapper style1">
 				<div class="inner">
 					<header class="align-center">
-						<p>Sukurti naują nuotraukų galeriją</p>
-						<?php echo "<a href='gallerynew.php' class='button big alt scrolly'><span>Kurti</span></a>"; ?>
+			
+						<?php echo "<a href='gallerynew.php' class='button big alt scrolly'><span>Sukurti galeriją</span></a>"; ?>
 					</header>
 				</div>
 			</section>			

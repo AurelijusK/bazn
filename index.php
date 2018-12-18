@@ -25,9 +25,10 @@
 				<section id="banner" data-video="images/banner">
 					<div class="inner">
 						<header>
-							<h1>This is Broadcast</h1>
-							<p>Morbi eu purus eget urna interdum dignissim sed consectetur augue<br />
-							vivamus vitae libero in nulla iaculis eleifend non sit amet nulla.</p>
+							<!-- <h1>This is Broadcast</h1> -->
+							<p>
+							Jn 3,16: Nes Dievas taip pamilo pasaulį, jog atidavė savo viengimį Sūnų,<br />kad kiekvienas, kuris Jį tiki,
+							 nepražūtų, bet turėtų amžinąjį gyvenimą.</p>
 						</header>
 						<a href="#main" class="button big alt scrolly"><i class="fas fa-chevron-down"></i></a>
 					</div>
@@ -40,10 +41,10 @@
 			<!-- One -->
 				<section class="wrapper style1">
 					<div class="inner">
-						<header class="align-center">
+						<!-- <header class="align-center">
 							<h2>Nam eu nisi non ante sodale</h2>
 							<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-						</header>
+						</header> -->
 						<!-- 2 Column Video Section -->
 							
 							<div class="flex flex-2">
@@ -79,65 +80,67 @@
 							} else{
 								echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 							}
-
-
 							?>
-							</div>		
-
-
+							</div>
+							<header class="align-center">
+							<?php echo "<a href='videostream.php' class='button big alt scrolly'><span>Tiesioginė transliacija</span></a>"; ?>
+							</header>
 					</div>
 				</section>
 
 			<!-- Two -->
 				<!-- Last Post -->
 
-
-			<?php
-
-
-			$sql = "SELECT * FROM post
-			ORDER BY posttime DESC
-			LIMIT 2";
-
-			if($result = mysqli_query($conn, $sql)){
-				if(mysqli_num_rows($result) > 0){
-					while($row = mysqli_fetch_array($result)){	
-
-			?>
-							<section class="wrapper style1">
-								<div class="inner">
-									<header class="align-center">
-										<h2><?php echo $row['posttitle']; ?></h2>
-										<p><?php echo $row['postautor'].'  '.$row['postdate']; ?></p>
-									</header>
-				
-									<p><?php echo $row['postcontent']; ?></p>
-									<header class="align-center">
-									<?php echo "<a href='post.php?postid=".$row['postid']."' class='button big alt scrolly'><span>Daugiau naujienų</span></a>"; ?>
-									</header>
-								</div>
-							</section>
-			<?php
-					}
-					// Free result set
-					mysqli_free_result($result);
-				} else{
-					echo "No records matching your query were found.";
-				}
-			} else{
-				echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-			}
-
-
-			?>
-
-			<!-- Three -->
-				<section class="wrapper ">
+				<section class="wrapper style1">
 					<div class="inner">
-						<header class="align-center">
-							<h2>Aliquam ipsum purus dolor</h2>
-							<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-						</header>
+					<div class="flex flex-2">
+					<?php
+
+
+					$sql = "SELECT * FROM post
+					ORDER BY posttime DESC
+					LIMIT 2";
+
+					if($result = mysqli_query($conn, $sql)){
+						if(mysqli_num_rows($result) > 0){
+							while($row = mysqli_fetch_array($result)){	
+
+					?>
+							<div class="col">	
+							<header class="align-center">
+								<h2><?php echo $row['posttitle']; ?></h2>
+								<p><?php echo $row['postautor'].'  '.$row['postdate']; ?></p>
+							</header>
+		
+							<p><?php echo $row['postcontent']; ?></p>
+							</div>
+
+					<?php
+							}
+							// Free result set
+							mysqli_free_result($result);
+						} else{
+							echo "No records matching your query were found.";
+						}
+					} else{
+						echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+					}
+
+
+					?>
+					</div>
+					<header class="align-center">
+					<?php echo "<a href='post.php?postid=".$row['postid']."' class='button big alt scrolly'><span>Daugiau naujienų</span></a>"; ?>
+					</header>
+					</div>
+				</section>
+			<!-- Three -->
+				<section class="wrapper style1">
+					<div class="inner">
+						<!-- <header class="align-center">
+							<h2>Nuotraukų galerijos</h2>
+							<p>Vaizdai is musų gyvenimo</p>
+						</header> -->
 
 						<!-- Gallery -->
 						<section id="galleries">
@@ -187,7 +190,7 @@
 																							
 								</div>
 								<header class="align-center">
-								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Galerijos</span></a>"; ?>
+								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Nuotraukų galerijos</span></a>"; ?>
 								</header>
 
 						</section>
