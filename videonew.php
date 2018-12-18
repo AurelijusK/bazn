@@ -19,7 +19,7 @@
         <section class="wrapper style1">
             <div class="inner">
 
-
+				<?php if(isUserLogged()) { ?>
                 <form action="videonewfin.php" method="post" enctype="multipart/form-data">
                    
                     <p>Video pavadinimas:
@@ -32,6 +32,10 @@
                     <button type="submit" class="button alt scrolly">Taip</button>       
                    
                 </form>
+				<?php } else {
+					echo "Neprisijungta! Negalima ikelti video";
+				}
+				?>
             </div>
         </section>
         </div>

@@ -17,7 +17,13 @@
 		<div id="main">
 
 		<!-- One -->
-
+		<section class="wrapper style1">
+			<div class="inner">
+				<header class="align-center">
+					<?php echo "<a href='gallerynew.php' class='button big alt scrolly'><span>Sukurti galeriją</span></a>"; ?>
+				</header>
+			</div>
+		</section>		
 
 		<!-- Galleries -->
 
@@ -50,7 +56,7 @@
 						<header class="align-center">
 						<h3><?php echo ($row['gallerytitle']); ?></h3>
 						<p><?php echo "<a href='gallery.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Žirūėti</span></a>"; ?>
-						</p>
+						<?php echo "<a href='galleryedit.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Redaguoti</span></a>"; ?></p>
 						</header>									
 							<div class="content">	
 							

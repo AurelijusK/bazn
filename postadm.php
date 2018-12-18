@@ -18,7 +18,13 @@
 		<div id="main">
 
 		<!-- One -->
-		
+		<section class="wrapper style1">
+			<div class="inner">
+				<header class="align-center">
+					<?php echo "<a href='postnew.php' class='button big alt scrolly'><span>Sukurti naujieną</span></a>"; ?>
+				</header>
+			</div>
+		</section>		
 
 		<!-- Two -->
 
@@ -51,7 +57,7 @@
 								<div class="longtext">				
 								<p><?php echo $row['postcontent']; ?></p>
 								</div>
-								
+								<button class='button' style="background:darkred" onclick="window.location.href='postdelete.php?postid=<?php echo ($row['postid']); ?>'"><i class="far fa-trash-alt"></i></button>
 							</div>
 						</section>
 		<?php
@@ -100,7 +106,12 @@
 							<p><?php echo $row['postcontent']; ?></p>
 							</div>
 						<header class="align-center">
-						<?php echo "<a href='post.php?postid=".$row['postid']."' class='button alt scrolly'><span>Skaityti</span></a>"; ?>
+						<?php if(isUserLogged()) {
+							echo "<a href='postadm.php?postid=".$row['postid']."' class='button alt scrolly'><span>Skaityti</span></a>"; 
+						} else {
+							echo "<a href='post.php?postid=".$row['postid']."' class='button alt scrolly'><span>Skaityti</span></a>"; 
+						}
+							?>
 						</header>
 						</div>
 			<?php

@@ -18,7 +18,7 @@
 		<div id="main">
 		<section class="wrapper style1">
 		<div class="inner">
-			
+			<?php if(isUserLogged()) { ?>
 			<!-- Gallery -->
 			<section id="galleries">
 
@@ -99,11 +99,14 @@
 				</div>
 		
 				<header class="align-center">
-				<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Visos galerijos</span></a>"; ?>
+				<?php echo "<a href='galleriesadm.php' class='button big alt scrolly'><span>Visos galerijos</span></a>"; ?>
 				</header>
 
 			</section>
-
+			<?php } else {
+				echo "Neprisijungta! Negalima ikelti nuotraukų";
+			}
+			?>		
 		</div>
 		</section>
 		</div>		

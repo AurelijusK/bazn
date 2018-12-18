@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Galerijos kūrimas</title>
+		<title>Login adm</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,19 +19,15 @@
         <section class="wrapper style1">
             <div class="inner">
 
-				<?php if(isUserLogged()) { ?>
-                <form action="gallerynewfin.php" method="post" enctype="multipart/form-data">
+                <div  class="form">
+                <form action="logfin.php" method="post">
                    
-                    <p>Galerijos pavadinimas:
-                    <input class="input" type="text"  required name="gallerytitle" value="" ></p>
-                    <p><?php echo date("Y-m-d");?></p><br>
-                    <button type="submit" class="button alt scrolly">Taip</button>       
+                <p>Įvesti slaptažodį:
+                <input class="inputfield" type="password" name="pass"></p>
+                <button type="submit" class="button big alt scrolly">Taip</button>       
                    
                 </form>
-				<?php } else {
-					echo "Neprisijungta! Negalima ikelti nuotraukų";
-				}
-				?>
+                </div>
             </div>
         </section>
         </div>
@@ -44,3 +40,4 @@
 
 	</body>
 </html>        
+

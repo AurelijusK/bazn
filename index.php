@@ -25,7 +25,7 @@
 				<section id="banner" data-video="images/banner">
 					<div class="inner">
 						<header>
-							<!-- <h1>This is Broadcast</h1> -->
+							
 							<p>
 							Jn 3,16: Nes Dievas taip pamilo pasaulį, jog atidavė savo viengimį Sūnų,<br />kad kiekvienas, kuris Jį tiki,
 							 nepražūtų, bet turėtų amžinąjį gyvenimą.</p>
@@ -67,7 +67,13 @@
 												<p class="caption">
 												<?php echo $row['videotitle'] . "<br>" . $row['videodate']; ?>
 												</p>
-												<?php echo "<a href='video.php?videoid=".$row['videoid']."' class='link'><span>Click Me</span></a>"; ?>
+												<?php if(isUserLogged()) { 
+												echo "<a href='videoadm.php?videoid=".$row['videoid']."' class='link'><span>Click Me</span></a>"; 
+												}
+												else {
+												echo "<a href='video.php?videoid=".$row['videoid']."' class='link'><span>Click Me</span></a>"; 
+												}												
+												?>
 												
 											</div>
 							<?php
@@ -93,13 +99,13 @@
 
 				<section class="wrapper style1">
 					<div class="inner">
-					<div class="flex flex-2">
+					<div class="flex">
 					<?php
 
 
 					$sql = "SELECT * FROM post
 					ORDER BY posttime DESC
-					LIMIT 2";
+					LIMIT 1";
 
 					if($result = mysqli_query($conn, $sql)){
 						if(mysqli_num_rows($result) > 0){
@@ -131,7 +137,12 @@
 					?>
 					</div>
 					<header class="align-center">
-					<?php echo "<a href='post.php?postid=".$row['postid']."' class='button big alt scrolly'><span>Daugiau naujienų</span></a>"; ?>
+					<?php if(isUserLogged()) {
+					echo "<a href='postadm.php' class='button big alt scrolly'><span>Daugiau naujienų</span></a>";
+					} else {
+					echo "<a href='post.php' class='button big alt scrolly'><span>Daugiau naujienų</span></a>";	
+					}
+					 ?>
 					</header>
 					</div>
 				</section>
@@ -191,7 +202,12 @@
 																							
 								</div>
 								<header class="align-center">
-								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Nuotraukų galerijos</span></a>"; ?>
+								<?php if(isUserLogged()) {
+								echo "<a href='galleriesadm.php' class='button big alt scrolly'><span>Nuotraukų galerijos</span></a>"; 
+								} else {
+								echo "<a href='galleries.php' class='button big alt scrolly'><span>Nuotraukų galerijos</span></a>";	
+								}
+								?>
 								</header>
 
 						</section>

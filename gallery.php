@@ -84,7 +84,12 @@
 															
 								</div>
 								<header class="align-center">
-								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Visos galerijos</span></a>"; ?>
+								<?php if(isUserLogged()) { 
+									echo "<a href='galleriesadm.php' class='button big alt scrolly'><span>Visos galerijos</span></a>";
+								} else {
+									echo "<a href='galleries.php' class='button big alt scrolly'><span>Visos galerijos</span></a>";
+								} 
+								?>
 								</header>
 
 						</section>

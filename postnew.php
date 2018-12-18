@@ -19,7 +19,7 @@
         <section class="wrapper style1">
             <div class="inner">
 
-
+				<?php if(isUserLogged()) { ?>
                 <form action="postnewfin.php" method="post" enctype="multipart/form-data">
                    
                     <p>Naujienos pavadinimas:
@@ -33,6 +33,10 @@
                     <button type="submit" class="button alt scrolly">Taip</button>       
                    
                 </form>
+				<?php } else {
+					echo "Neprisijungta! Negalima ikelti naujienų.";
+				}
+				?>
             </div>
         </section>
         </div>

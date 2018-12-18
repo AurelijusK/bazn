@@ -83,8 +83,8 @@
 							
 							<p>Video pagal data:&nbsp;&nbsp;&nbsp;&nbsp;
 							<input class="inputfield" type="date" name="day" value="<?php echo date("Y-m-d");?>">
-							<button type="submit" class="button alt"><span><b>Taip</b></span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Įkelti naują video įrašą&nbsp;&nbsp;&nbsp;&nbsp;
-							<?php echo "<a href='videonew.php' class='button alt'><span>Įkelti</span></a>"; ?></p>
+							<button type="submit" class="button alt"><span><b>Taip</b></span></button>
+							</p>
 						
 					</form>
 					
@@ -114,7 +114,12 @@
 												<p class="caption">
 												<?php echo $row2['videotitle'] . "<br>" . $row2['videodate']; ?>
 												</p>
-												<?php echo "<a href='video.php?videoid=".$row2['videoid']."' class='link'><span>Click Me</span></a>"; 
+												<?php if(isUserLogged()) {
+													echo "<a href='videoadm.php?videoid=".$row2['videoid']."' class='link'><span>Click Me</span></a>"; 
+												} else {
+													echo "<a href='video.php?videoid=".$row2['videoid']."' class='link'><span>Click Me</span></a>"; 
+												}
+											
 												?>
 												
 											</div>
@@ -148,7 +153,11 @@
 												<p class="caption">											
 												<?php echo $row3['videotitle'] . "<br>" . $row3['videodate']; ?>
 												</p>
-												<?php echo "<a href='video.php?videoid=".$row3['videoid']."' class='link'><span>Click Me</span></a>"; 
+												<?php if(isUserLogged()) {
+													echo "<a href='videoadm.php?videoid=".$row3['videoid']."' class='link'><span>Click Me</span></a>"; 
+												} else {
+													echo "<a href='video.php?videoid=".$row3['videoid']."' class='link'><span>Click Me</span></a>";
+												}
 												 ?>
 												
 											</div>
