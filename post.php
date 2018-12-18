@@ -18,6 +18,15 @@
 		<div id="main">
 
 		<!-- One -->
+		<section class="wrapper style1">
+			<div class="inner">
+				<header class="align-center">
+					<?php echo "<a href='postnew.php' class='button big alt scrolly'><span>Sukurti naujieną</span></a>"; ?>
+				</header>
+			</div>
+		</section>		
+
+		<!-- Two -->
 
 		<!-- Last Post -->
 
@@ -45,8 +54,9 @@
 								<h2><?php echo $row['posttitle']; ?></h2>
 								<p><?php echo $row['postautor'].'  '.$row['postdate']; ?></p>
 							</header>
-				
+								<div class="longtext">				
 								<p><?php echo $row['postcontent']; ?></p>
+								</div>
 								<button class='button' style="background:darkred" onclick="window.location.href='postdelete.php?postid=<?php echo ($row['postid']); ?>'"><i class="far fa-trash-alt"></i></button>
 							</div>
 						</section>
@@ -64,7 +74,7 @@
 		?>
 
 
-		<!-- Two -->
+		<!-- Three -->
 		<section class="wrapper style1">
 			<div class="inner">
 				<!-- <header class="align-center">

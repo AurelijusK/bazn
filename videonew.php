@@ -22,16 +22,14 @@
 
                 <form action="videonewfin.php" method="post" enctype="multipart/form-data">
                    
-                    <p>Video pavadinimas: </p>
-                    <input class="inputfieldh" type="text"  required name="videotitle" value="" ><br>
-                  
-                                    
-                    <p>Čia ikelkite nuorodą iš Youtube nukopijave "Copy embed code"</p>
-                    <input class="inputfieldh" type="text"  required name="videolink" value="" ><br>
+                    <p>Video pavadinimas:
+                    <input class="inputfieldh" type="text"  required name="videotitle" value="" > </p>                               
+                    <p>Čia ikelkite nuorodą iš Youtube nukopijave "Copy embed code"
+                    <input class="inputfieldh" type="text"  required name="videolink" value="" ></p>
                     
                     <p><?php echo date("Y-m-d");?></p><br>
                     
-                    <button type="submit" class="button big alt scrolly">Taip</button>       
+                    <button type="submit" class="button alt scrolly">Taip</button>       
                    
                 </form>
             </div>

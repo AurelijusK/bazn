@@ -12,8 +12,10 @@
 <nav id="menu">
     <ul class="links">
         <li><a href="index.php">Pradžia</a></li>
+        <li><a href="about.php">Mes tikime</a></li>
         <li><a href="video.php">Video</a></li>
-        <li><a href="post.php">Naujienos</a></li>
         <li><a href="galleries.php">Galerijos</a></li>
+        <li><a href="post.php">Naujienos</a></li>
+        
     </ul>
 </nav>

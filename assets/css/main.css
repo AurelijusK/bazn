@@ -3483,11 +3483,27 @@
 		height: 160px;
 		white-space: wrap;
 		overflow: hidden;
-		
 		/* for good looks */
 		padding: 10px;
 		
 	}
+	.longtext {
+		background: rgba(255, 255, 255, 0.01);
+		border-radius: 4px;
+		margin: 0 0 2em 0;
+		position: relative;
+		/* essential */
+		text-overflow: ellipsis;
+		width: 100%;
+		height: auto;
+		white-space: wrap;
+		overflow: hidden;
+		/* for good looks */
+		padding: 20px;
+		padding-bottom: 10px;
+		
+	}
+
 
 /* Video */
 

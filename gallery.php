@@ -84,7 +84,7 @@
 															
 								</div>
 								<header class="align-center">
-								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Galerijos</span></a>"; ?>
+								<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Visos galerijos</span></a>"; ?>
 								</header>
 
 						</section>

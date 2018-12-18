@@ -75,17 +75,14 @@
 		<!-- Two -->
 			<section class="wrapper style1" id="Two" >
 				<div class="inner" >
-					<!-- <header class="align-center">
-						<h2>Aliquam ipsum purus dolor</h2>
-						<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-					</header> -->
-					<form method="post" >
-							
+					<header class="align-center">
+					<?php echo "<a href='videonew.php' class='button big alt'><span>Įkelti video</span></a>"; ?></p>
+					</header>
+					
+					<form method="post" >							
 							<p>Video pagal data:&nbsp;&nbsp;&nbsp;&nbsp;
 							<input class="inputfield" type="date" name="day" value="<?php echo date("Y-m-d");?>">
-							<button type="submit" class="button alt"><span><b>Taip</b></span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Įkelti naują video įrašą&nbsp;&nbsp;&nbsp;&nbsp;
-							<?php echo "<a href='videonew.php' class='button alt'><span>Įkelti</span></a>"; ?></p>
-						
+							<button type="submit" class="button alt"><span><b>Taip</b></span></button>
 					</form>
 					
 					<!-- 3 Column Video Section -->

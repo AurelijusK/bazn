@@ -111,8 +111,9 @@
 								<h2><?php echo $row['posttitle']; ?></h2>
 								<p><?php echo $row['postautor'].'  '.$row['postdate']; ?></p>
 							</header>
-		
+							<div class="longtext">		
 							<p><?php echo $row['postcontent']; ?></p>
+							</div>
 							</div>
 
 					<?php

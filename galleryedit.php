@@ -36,7 +36,7 @@
 						</header>		
 					<form action="galleryeditfin.php?galleryid=<?php echo $_GET['galleryid'] ?>" method="post" enctype="multipart/form-data">	
 					Nuotraukos aprasymas:
-					<input type="text"   name="imgtitle" value="" required>
+					<input type="text"   name="imgtitle" value=" ">
 					Pasirinkti foto:
 					<label class="cabinetpost">
 					<input type="file" name="img" class="filepost" />
@@ -99,7 +99,7 @@
 				</div>
 		
 				<header class="align-center">
-				<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Galerijos</span></a>"; ?>
+				<?php echo "<a href='galleries.php' class='button big alt scrolly'><span>Visos galerijos</span></a>"; ?>
 				</header>
 
 			</section>

@@ -17,100 +17,98 @@
 		<div id="main">
 
 		<!-- One -->
+		<section class="wrapper style1">
+			<div class="inner">
+				<header class="align-center">
+					<?php echo "<a href='gallerynew.php' class='button big alt scrolly'><span>Sukurti galeriją</span></a>"; ?>
+				</header>
+			</div>
+		</section>		
 
 		<!-- Galleries -->
 
-			<section class="wrapper style1">
-				<div class="inner">
-					<!-- <header class="align-center">
-						<h2>Galerijos</h2>
-						<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-					</header> -->
-			
+		<section class="wrapper style1">
+			<div class="inner">
+				<!-- <header class="align-center">
+					<h2>Galerijos</h2>
+					<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+				</header> -->
+		
 
 
-					<!-- Gallery -->
-					<section id="galleries">
-					<?php
+				<!-- Gallery -->
+				<section id="galleries">
+				<?php
 
-					$sql = "SELECT * FROM gallery
-					ORDER BY gallerytime DESC";
-					if($result = mysqli_query($conn, $sql)){
-						if(mysqli_num_rows($result) > 0){
+				$sql = "SELECT * FROM gallery
+				ORDER BY gallerytime DESC";
+				if($result = mysqli_query($conn, $sql)){
+					if(mysqli_num_rows($result) > 0){
 
-								while($row = mysqli_fetch_array($result)){	
-					?>	
+							while($row = mysqli_fetch_array($result)){	
+				?>	
 
 <!-------------------------------------------------------------------------------------------------------------------------->
-							<!-- Photo Galleries -->
+						<!-- Photo Galleries -->
 
-						
-							<div class="gallery">	
-							<header class="align-center">
-							<h3><?php echo ($row['gallerytitle']); ?></h3>
-							<p><?php echo "<a href='gallery.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Žirūėti</span></a>"; ?>
-							<?php echo "<a href='galleryedit.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Redaguoti</span></a>"; ?></p>
-							</header>									
-								<div class="content">	
-								
-								<?php			
-								$sql2 = "SELECT *
-								FROM images
-								WHERE images.imggallery='" . $row['galleryid'] . "'
-								ORDER BY images.imgtime DESC
-								LIMIT 4";
-								if($result2 = mysqli_query($conn, $sql2)){
-									if(mysqli_num_rows($result2) > 0){
-			
-										while($row2 = mysqli_fetch_array($result2)){	
-								?>							
-										<div class="media" style="background-image: url(<?php echo ($row2['imglink2']); ?>);">									
-											<a href="<?php echo ($row2['imglink']); ?>"><img src="<?php echo ($row2['imglink2']); ?>" alt="" title="<?php echo ($row2['imgtitle']); ?>" /></a>
-										</div>
-								<?php
-											}
-										// Free result set
-										mysqli_free_result($result2);
-									} else{
-										echo "Galerijoje nėra įkelta jokiu fotografijų.";
-									}
+					
+						<div class="gallery">	
+						<header class="align-center">
+						<h3><?php echo ($row['gallerytitle']); ?></h3>
+						<p><?php echo "<a href='gallery.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Žirūėti</span></a>"; ?>
+						<?php echo "<a href='galleryedit.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Redaguoti</span></a>"; ?></p>
+						</header>									
+							<div class="content">	
+							
+							<?php			
+							$sql2 = "SELECT *
+							FROM images
+							WHERE images.imggallery='" . $row['galleryid'] . "'
+							ORDER BY images.imgtime DESC
+							LIMIT 4";
+							if($result2 = mysqli_query($conn, $sql2)){
+								if(mysqli_num_rows($result2) > 0){
+		
+									while($row2 = mysqli_fetch_array($result2)){	
+							?>							
+									<div class="media" style="background-image: url(<?php echo ($row2['imglink2']); ?>);">									
+										<a href="<?php echo ($row2['imglink']); ?>"><img src="<?php echo ($row2['imglink2']); ?>" alt="" title="<?php echo ($row2['imgtitle']); ?>" /></a>
+									</div>
+							<?php
+										}
+									// Free result set
+									mysqli_free_result($result2);
 								} else{
-									echo "ERROR: Could not able to execute $sql2. " . mysqli_error($conn);
+									echo "Galerijoje nėra įkelta jokiu fotografijų.";
 								}
-								?>
-								</div>	
-																		
+							} else{
+								echo "ERROR: Could not able to execute $sql2. " . mysqli_error($conn);
+							}
+							?>
 							</div>	
-						
-				
+																	
+						</div>	
+					
+			
 <!-------------------------------------------------------------------------------------------------------------------------->
 
-				
-					<?php
-							}
-							// Free result set
-							mysqli_free_result($result);
-						} else{
-							echo "Galerijoje nėra įkelta jokiu fotografijų.";
-						}
-					} else{
-						echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-					}
-					?>
-
-					</section>
-
-				</div>
-			</section>
-
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
 			
-						<?php echo "<a href='gallerynew.php' class='button big alt scrolly'><span>Sukurti galeriją</span></a>"; ?>
-					</header>
-				</div>
-			</section>			
+				<?php
+						}
+						// Free result set
+						mysqli_free_result($result);
+					} else{
+						echo "Galerijoje nėra įkelta jokiu fotografijų.";
+					}
+				} else{
+					echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+				}
+				?>
+
+				</section>
+
+			</div>
+		</section>				
 		<!-- Footer -->
 		<?php include 'footer.php';?>
 
