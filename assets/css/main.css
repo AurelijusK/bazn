@@ -2130,6 +2130,8 @@
 			button,
 			.button {
 				padding: 0;
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 
 		}
@@ -4055,4 +4057,11 @@
 		background:rgba(255, 255, 255, 0.075);
 		padding: 4px;
 		
+	}
+	.logo{
+		position: absolute;
+		vertical-align: middle;
+		height: auto;
+		padding: 10px;
+		left: 0;
 	}

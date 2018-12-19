@@ -25,7 +25,7 @@
                     <p>Galerijos pavadinimas:
                     <input class="input" type="text"  required name="gallerytitle" value="" ></p>
                     <p><?php echo date("Y-m-d");?></p><br>
-                    <button type="submit" class="button alt scrolly">Taip</button>       
+                    <button type="submit" class="button alt scrolly">Sukurti</button>       
                    
                 </form>
 				<?php } else {

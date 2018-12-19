@@ -24,7 +24,7 @@
                    
                 <p>Įvesti slaptažodį:
                 <input class="inputfield" type="password" name="pass"></p>
-                <button type="submit" class="button big alt scrolly">Taip</button>       
+                <button type="submit" class="button big alt scrolly">Prisijungti</button>       
                    
                 </form>
                 </div>

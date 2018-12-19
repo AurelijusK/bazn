@@ -6,22 +6,23 @@
 <footer id="footer">
 				<div class="inner">
 					<div class="flex flex-3">
-						<div class="col">
-							<h3>Kontaktai</h3>
-							<ul class="alt">
-								<li><a href="#">Nascetur nunc varius commodo.</a></li>
-								<li><a href="#">Vis id faucibus montes tempor</a></li>
-								<li><a href="#">Massa amet lobortis vel.</a></li>
-								<li><a href="#">Nascetur nunc varius commodo.</a></li>
-							</ul>
-						</div>
+						
 						<div class="col">
 							<h3>Tarnavimai</h3>
 							<ul class="alt">
-								<li><a href="#">Nascetur nunc varius commodo.</a></li>
-								<li><a href="#">Vis id faucibus montes tempor</a></li>
-								<li><a href="#">Massa amet lobortis vel.</a></li>
-								<li><a href="#">Nascetur nunc varius commodo.</a></li>
+								<li><a>Trečiadieniais 18 val.</a></li>
+								<li><a>Penktadieniais 18 val.</a></li>
+								<li><a>Jaunimo tarnavimas - šeštadieniais</a></li>
+								<li><a>Sekmadieniais 10 val.</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h3>Kontaktai</h3>
+							<ul class="alt">
+								<li><a>Liepkalnio 34. Vilnius</a></li>
+								<li><a>+370 643 32321</a></li>
+								<li><a>ricardaskrikscionis@gmail.com</a></li>
+								
 							</ul>
 						</div>
 						<div class="col">

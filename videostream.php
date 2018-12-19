@@ -47,7 +47,7 @@
 								</header> -->
 								<div class="video">
 									<div class="video-wrapper">
-									<iframe width="640" height="360" src="https://www.youtube.com/embed/live_stream?channel=UCblKJJFWw9hnifb7A6P3Dww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="853" height="480" src="https://www.youtube.com/embed/live_stream?channel=UCobPZA1UkOHEXtZVL-STENg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
 									<p class="caption">
 									Tiesioginė transliacija

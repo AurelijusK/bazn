@@ -80,7 +80,7 @@
 					<form method="post" >							
 							<p>Video pagal data:&nbsp;&nbsp;&nbsp;&nbsp;
 							<input class="inputfield" type="date" name="day" value="<?php echo date("Y-m-d");?>">
-							<button type="submit" class="button alt"><span><b>Taip</b></span></button>
+							<button type="submit" class="button alt"><span><b>Rinktis</b></span></button>
 					</form>
 					
 					<!-- 3 Column Video Section -->

@@ -30,7 +30,7 @@
                     <textarea rows="10" name="postcontent" id="postcontent" cols="111" class="inputfieldp" required></textarea></p>
                     <p><?php echo date("Y-m-d");?></p><br>
                     
-                    <button type="submit" class="button alt scrolly">Taip</button>       
+                    <button type="submit" class="button alt scrolly">Įkelti</button>       
                    
                 </form>
 				<?php } else {

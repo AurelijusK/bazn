@@ -5,7 +5,8 @@
 <!-- Header -->
 <header id="header">
     
-    <h1><a href="index.php"><img src="images/IXOYE.png" height="48px"></a></h1>
+    <!-- <div class='logo'><a href="index.php"><img src="images/IXOYE.png" height="25px"></a></div> -->
+   
     <?php session_start(); require_once 'session.php';?>
     <?php if(isUserLogged()) { echo "Prisijungta ".$_SESSION['name']."  "; }?>
     <a href="#menu">Meniu</a>

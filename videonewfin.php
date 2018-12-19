@@ -12,5 +12,5 @@ if(mysqli_query($conn, $sql)){
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
-header("Location:video.php");
+header("Location:videoadm.php");
  

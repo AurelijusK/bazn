@@ -29,7 +29,7 @@
                     
                     <p><?php echo date("Y-m-d");?></p><br>
                     
-                    <button type="submit" class="button alt scrolly">Taip</button>       
+                    <button type="submit" class="button alt scrolly">Įkelti</button>       
                    
                 </form>
 				<?php } else {
