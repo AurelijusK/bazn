@@ -5,7 +5,7 @@
 		<title>Login adm</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.min.css" />
 	</head>
 	<body class="subpage">
 
@@ -27,9 +27,10 @@
                 session_destroy();
                 session_start();
             }
+            
                 $_POST['pass']=md5($_POST['pass']);
-                // var_dump ($_POST['pass']);
-                $pass="2e53d715b9d776b6c45263d31ecd3d87";
+                
+                $pass="0d4437ac32d5db067466cd96e7e086c9";
                 
 
                     if ($pass==$_POST['pass']){

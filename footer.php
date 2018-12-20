@@ -1,6 +1,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/main.min.css" />
 
 <!-- Footer -->
 <footer id="footer">
@@ -67,4 +67,4 @@
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.min.js"></script>

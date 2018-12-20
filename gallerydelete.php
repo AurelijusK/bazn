@@ -11,6 +11,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 header("Location:galleries.php");
-// echo "<br><br><a href='index.php'>Naujienos</a><br>";
+
 
 ?>

@@ -5,7 +5,7 @@
 		<title>Galerijos</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.min.css" />
 	</head>
 	<body class="subpage">
 
@@ -49,7 +49,7 @@
 						<div class="gallery">	
 						<header class="align-center">
 						<h3><?php echo ($row['gallerytitle']); ?></h3>
-						<p><?php echo "<a href='gallery.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Žirūėti</span></a>"; ?>
+						<p><?php echo "<a href='gallery.php?galleryid=".$row['galleryid']."' class='button alt scrolly'><span>Žiūrėti</span></a>"; ?>
 						</p>
 						</header>									
 							<div class="content">	

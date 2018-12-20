@@ -5,7 +5,7 @@
 		<title>Video</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.min.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	</head>
 	<body class="subpage">
@@ -47,7 +47,7 @@
 								</header> -->
 								<div class="video">
 									<div class="video-wrapper">
-									<iframe width="853" height="480" src="https://www.youtube.com/embed/live_stream?channel=UCobPZA1UkOHEXtZVL-STENg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="853" height="480" src="https://www.youtube.com/embed/live_stream?channel=UCl9XmGxDHPnPxV-AogfTKbw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
 									<p class="caption">
 									Tiesioginė transliacija
