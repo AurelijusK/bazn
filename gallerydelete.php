@@ -10,7 +10,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error deleting record: " . $conn->error;
 }
 
-header("Location:galleries.php");
+header("Location:galleriesadm.php");
 
 
 ?>
