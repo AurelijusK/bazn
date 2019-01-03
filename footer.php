@@ -58,7 +58,7 @@
 						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
 					</ul> -->
-					Copyright &copy; 2018 by <a href="https://www.facebook.com/aurelijanas" target="_blank">AK</a>.
+					Copyright &copy; 2018
 				</div>
 			</footer>
 			<!-- Scripts -->
